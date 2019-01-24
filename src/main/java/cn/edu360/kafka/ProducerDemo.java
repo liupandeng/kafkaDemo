@@ -11,7 +11,7 @@ public class ProducerDemo {
 
 	public static void main(String[] args) {
 		Properties props = new Properties();
-		props.put("metadata.broker.list", "node-4:9092,node-5:9092,node-6:9092");
+		props.put("metadata.broker.list", "hdp-01:9092,hdp-02:9092,hdp-03:9092");
 		props.put("serializer.class", "kafka.serializer.StringEncoder");
 		ProducerConfig config = new ProducerConfig(props);
 		Producer<String, String> producer = new Producer<String, String>(config);
