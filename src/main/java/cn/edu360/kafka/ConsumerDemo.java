@@ -18,9 +18,9 @@ public class ConsumerDemo {
 	public static void main(String[] args) {
 		
 		Properties props = new Properties();
-		props.put("zookeeper.connect", "node-1:2181,node-2:2181,node-3:2181");
+		props.put("zookeeper.connect", "hdp-01:2181,hdp-02:2181,hdp-03:2181");
 		props.put("group.id", "vvvvv");
-		//smallest重最开始消费,largest代表重消费者启动后产生的数据才消费
+		//smallest从最开始消费,largest代表从消费者启动后产生的数据才消费
 		//--from-beginning
 		props.put("auto.offset.reset", "smallest");
 
